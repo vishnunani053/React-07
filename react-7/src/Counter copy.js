@@ -11,7 +11,7 @@ class Counter extends React.Component{
     render(){
         return <div>
  <nav className="navbar navbar-dark bg-dark">
-        <a className="nav-link">Message Component</a>
+        <a className="navbar-brand">Message Component</a>
         </nav>
         <div className="container mt-5">
         <div className="row">
