@@ -1,14 +1,16 @@
 import React from "react";
 //import Message from "./Message"
 //import Counter from "./counter/Counter"
-import Product1 from "./product/Product1"
+//import Cart from "./product/Cart"
 import Navbar from "./product/Navbar";
+import Product from "./product/Product";
 let App=()=>{
   return <div>
 {/* <Message/> */}
 {/* <Counter/> */}
 <Navbar/>
-<Product1/>
+  <Product/>
+{/* <Cart/>  */}
   </div>
 }
 export default App
