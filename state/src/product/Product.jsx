@@ -33,7 +33,7 @@ this.setState({quantity:this.state.quantity -1})
             <td>{this.state.name}</td>
            <td><img src={this.state.Image}></img></td>  
             <td>{this.state.price}</td>  
-            <td><i class="fa fa-plus-circle" onClick={this.incHandler}></i>{this.state.quantity}<i class="fa fa-minus-circle" onClick={this.decHandler}></i></td>
+            <td><i className="fa fa-minus-circle" onClick={this.decHandler} ></i>{this.state.quantity} <i className="fa fa-plus-circle" onClick={this.incHandler}></i></td>
             <td>{this.state.price*this.state.quantity}</td>
             </tbody>
        </table>

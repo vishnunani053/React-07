@@ -10,10 +10,10 @@ import React, { Component } from "react";
         }
     
     incHandler=()=>{
-        this.setState({quantity:this.state.quantity+1})
+        this.setState({product:{...this.state.product,quantity:this.state.product.quantity+1}})
     }
     decHandler=()=>{
-        this.setState({quantity:this.state.quantity})
+        this.setState({product:{...this.state.product,quantity:this.state.product.quantity-1}})
     }
 render(){
  return <div>
@@ -33,9 +33,7 @@ render(){
            <td>{this.state.product.name}</td>
            <td><img src={this.state.product.image}></img></td>
            <td>{this.state.product.price}</td> 
-           <button className ="btn btn-primary" onClick={this.decHandler}>-</button>&nbsp;
-           {this.state.product.quantity}&nbsp;
-           <button className="btn btn-success" onClick={this.incHandler}>+</button>
+           <td><i className="fa fa-minus-circle" onClick={this.decHandler} ></i> &nbsp;{this.state.product.quantity} &nbsp;<i className="fa fa-plus-circle" onClick={this.incHandler}></i></td>
            <td>{this.state.product.price*this.state.product.quantity}</td>  
            </tr>   
             </tbody>
