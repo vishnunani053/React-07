@@ -4,35 +4,36 @@ import UserList from './UserList'
 import UserDetails from './UserDetails'
 
 const UserApp = () => {
-  let [Users, setUsers] = useState({})
+  let [users, setusers] = useState({})
   let [selectedUser, setselectedUser] = useState({})
-
   useEffect(() => {
     Axios.get("https://dummyjson.com/users").then((response) => {
-      setUsers(response.data)
+      setusers(response.data)
 
-    }).catch(() => { })
+    }).catch(() => {
+
+    })
   }, [])
-  let selectedUserHandler = (user) => {
-    setselectedUser(user)
+  let selectedUserHandler = (users) => {
+    setselectedUser(users)
   }
-  return (
-    <div className='container mt-5'>
-      <div className='row'>
-        <h2>User App</h2>
-        <pre>{JSON.stringify(Users)}</pre>
-        <div className='col-md-8'>
 
+  return (
+    <div className='container'>
+      <div className='row'>
+        <h2>user app</h2>
+        <pre>{JSON.stringify(users)}</pre>
+        <div className='col-8'>
           {
-            Object.keys(Users).length > 0 ? <> <UserList users={Users.users} selectedUser={selectedUserHandler} />
+            Object.keys(users).length > 0 ? <><UserList users={users.users} selectedUser={selectedUserHandler} />
             </> : null
           }
 
         </div>
-        <div className='col-md-4'>
+        <div className='col-4'>
           {
-            Object.keys(selectedUser).length > 0 ? <>
-              <UserDetails selectedUser={selectedUser}/></> : null
+            Object.keys(selectedUser).length > 0 ? <><UserDetails selectedUser={selectedUser} />
+            </> : null
           }
 
         </div>

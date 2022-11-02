@@ -1,18 +1,18 @@
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
- const Navbar = () => {
+const Navbar = () => {
   return (
     <div>
-        <nav  className='navbar navbar-dark bg-dark'>
-        <Link to="/" className='navbar-brand'>React-User-Component</Link>
+      <nav className="navbar navbar-dark bg-dark">
+        <Link to="/" className="navbar-brand">User-React-Component</Link>
         <div className="ml-auto">
-            <ul className="navbar-nav">
-                <li className="nav-list"><Link to="/users" className="nav-link">Users</Link></li>
-            </ul>
+          <ul className="navbar-nav">
+            <li className="nav-list"><Link to="/users" className="nav-link">Users</Link></li>
+          </ul>
         </div>
-
-        </nav>
+      </nav>
     </div>
   )
 }
- export default Navbar
+
+export default Navbar
