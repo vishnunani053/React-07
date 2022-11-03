@@ -1,6 +1,6 @@
 import React from 'react'
 import {Provider} from "react-redux"
-import { Product } from '../src/product/product'
+import Product from "./product/product"
 import { store } from './redux/store'
 const App = () => {
   return (

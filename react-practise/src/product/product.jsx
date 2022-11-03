@@ -15,11 +15,13 @@ const Product = () => {
     }
     return (
         <div className='container'>
+         {JSON.stringify(product)}
             <div className='row'>
-                <div className='col-md-6'>
+                <div className='col-md-8'>
                     <table className='table table-hover'>
                         <thead className='text-white bg-primary'>
                             <tr>
+                                <th>Image</th>
                                 <th>Name</th>
                                 <th>Price</th>
                                 <th>Quantity</th>
@@ -28,10 +30,11 @@ const Product = () => {
                         </thead>
                         <tbody>
                             <tr>
+                            <td><img src={product.image}></img></td>
                                 <td>{product.productName}</td>
-                                <td><i className='fa fa-minus-circle' onClick={incrHandler}></i>{product.price}<i className='fa fa-minus-circle' onClick={decrHandler}></i></td>
-                                <td>{product.quantity}</td>
-                                <td>{product.price * product.quantity}</td>
+                                <td>{product.price}</td>
+                                <td><i className='fa fa-minus-circle' onClick={decrHandler}></i>{product.qty}<i className='fa fa-plus-circle' onClick={incrHandler}></i></td>
+                                <td>{product.price * product.qty}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -41,4 +44,4 @@ const Product = () => {
     )
 }
 
-export { Product }
+export default Product
