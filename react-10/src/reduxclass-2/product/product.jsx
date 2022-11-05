@@ -11,9 +11,9 @@ const Product = () => {
    let incrHandler=()=>{
     dispatch(incrAction())
    }
-   let decrHandler=()=>[
+   let decrHandler=()=>{
     dispatch(decrAction())
-   ]
+}
   return (
     <div className='container'>
         <div className='row'>
@@ -28,7 +28,7 @@ const Product = () => {
                     </thead>
                     <tbody>
                         <tr>
-                        <tr><img src={product.img}></img></tr>
+                        <td><img src={product.img}></img></td>
                         <td>{product.productName}</td>
                         <td>{product.price}</td>
                         <td><i className='fa fa-minus-circle' onClick={decrHandler}></i>{product.qty}<i className='fa fa-plus-circle' onClick={incrHandler}></i></td>
