@@ -1,8 +1,8 @@
-import {createStore} from "redux"
-import userReducer from "./user/User.reducer"
+import { createStore } from "redux"
 import { composeWithDevTools } from "@redux-devtools/extension"
-import logger from "redux-logger"
+import userReducer from "./user/User.reducer"
 import thunk from "redux-thunk"
+import logger from "redux-logger"
 import { applyMiddleware } from "redux"
 
 let middleware = [thunk, logger]

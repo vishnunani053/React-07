@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "./Home/Home"
 import Navbar from './Navbar/Navbar'
 import Users from './users/Users'
-import {Provider} from 'react-redux'
+import { Provider } from 'react-redux'
 import store from './redux/Store'
 
 
@@ -19,7 +19,6 @@ const App = () => {
                     </Routes>
                 </Router>
             </Provider>
-
         </div>
     )
 }
