@@ -14,8 +14,8 @@ setUsers(response.data)
 
 })
   },[])
-  let selectedUserHandler=(user)=>{
-setselectedUser(user)
+  let selectedUserHandler=(users)=>{
+setselectedUser(users)
   }
   return (
     <div className='container'>
@@ -33,8 +33,7 @@ setselectedUser(user)
         <div className='col-md-4'>
           {
             Object.keys(selectedUser).length>0?<>
-            <UserDetails selectedUser={selectedUser}/>
-            </>:null
+            <UserDetails users={users.users} selectedUser={selectedUser}/></>:null
           }
         
         </div>

@@ -3,9 +3,7 @@ import React from 'react'
 const UserList = (props) => {
   let selectedUserHandler=(users)=>{
 console.log(users);
-props.selecteUser=(users)=>{
-
-}
+props.selectedUser(users)
   }
   return (
     <div className='container'>

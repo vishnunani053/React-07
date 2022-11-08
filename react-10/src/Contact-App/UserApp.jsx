@@ -24,7 +24,8 @@ const UserApp = () => {
         <div className='col-md-8'>
 
           {
-            Object.keys(users).length > 0 ? <> <UserList users={users.users} selectedUser={selectedUserHandler} />
+            Object.keys(users).length > 0 ? <>
+             <UserList users={users.users} selectedUser={selectedUserHandler} />
             </> : null
           }
 
@@ -32,7 +33,8 @@ const UserApp = () => {
         <div className='col-md-4'>
           {
             Object.keys(selectedUser).length > 0 ? <>
-              <UserDetails selectedUser={selectedUser}/></> : null
+              <UserDetails selectedUser={selectedUser}/>
+              </> : null
           }
 
         </div>
