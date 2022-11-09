@@ -1,17 +1,16 @@
 import React from 'react'
+import Home from "./Home/Home"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Navbar from './Navbar/Navbar'
-import CreateProduct from './Products/CreateProduct'
-import ProductList from './Products/ProductList'
-
+import UserApp from './react-app/UserApp'
 const App = () => {
   return (
     <div>
       <Router>
         <Navbar />
         <Routes>
-          <Route path='/Products' element={<ProductList />}/>
-          <Route path='/createProducts' element={<CreateProduct />}/>
+          <Route path='/' element={<Home />}></Route>
+          <Route path='/users' element={<UserApp />}></Route>
         </Routes>
       </Router>
     </div>
